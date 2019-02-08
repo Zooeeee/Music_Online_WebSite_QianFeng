@@ -1,0 +1,153 @@
+*{
+  /*   border: 1px solid #000; */
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 旋转的css  其中有适配本机火狐浏览器和普通 */
+@keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+
+.rotation{
+    transform: rotate(360deg);
+    animation: rotation 10s linear infinite;
+    -moz-animation: rotation 10s linear infinite;
+}
+.no-margin{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+
+/* 防止顶端nav产生margin-bottom */
+#top{
+    margin: 0px;
+}
+
+.main-height{
+    height: 855px;
+}
+#right-wrap{
+    text-align: left;
+    padding-top: 30px;
+
+}
+#mid-wrap{
+    padding-top: 30px;
+   
+}
+
+#cd{
+    margin-top: 15px;
+    width:200px;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.bottom{
+    height: 100%;
+}
+
+.inner {
+    height: 300px;
+    position: absolute;
+    top: 33px;
+    left: 13px;
+    /*cursor: pointer;*/
+    overflow:hidden;
+    text-align: center;
+  
+}
+.innerbox {
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #000;
+    font-size: .7rem;
+    font-family: "\5FAE\8F6F\96C5\9ED1",Helvetica,"黑体",Arial,Tahoma;
+    height: 100%;
+    
+}
+
+
+.main{
+    background:url(../img/back.jpg) no-repeat;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    background-size:cover;
+  
+}
+
+.icon-group{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+  
+}
+#mid-wrap .icon-group > img{
+   height: 20px;
+    width: 20px ;
+}
+#right-wrap .icon-group > img{
+    height: 16px;
+     width: 16px ;
+ }
+#userInfo{
+    height: 100px;
+   
+}
+.media-left > a >img{
+    width: 80px;
+    height:80px;
+}
+
+.hide{
+    display: none;
+}
+
+.filter{
+    background-color : rgba(255,255,255,0.1);
+    border: 0;
+    text-align: center;
+}
+
+.max-height {
+	max-height: 800px;
+}
+
+.scroll::-webkit-scrollbar{
+    width: 5px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.scroll::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(231, 219, 219, 0.2);
+    background: #c7bbbb;
+}
+
+.scroll::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(236, 230, 230, 0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+
+.playIcon{
+    background-image: url(../img/play.png);
+    height: 20px;
+}
+.collectIcon{
+    background-image: url(../img/collect.png);
+}
+.collectedIcon{
+    background-image: url(../img/collected.png);
+}
+.deleteIcon{
+    background-image: url(../img/delete.png);
+}
+

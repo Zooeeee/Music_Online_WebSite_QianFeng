@@ -1,0 +1,368 @@
+*{
+    margin:0;
+}
+div{
+    display: block;
+}
+body{
+    background: #333;
+    font-size:12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    word-break: break-word;
+}
+.bottom-wrap .bottom-center .con .info:after, .bottom-wrap .bottom-center:after, .bottom-wrap:after, .center-wrap .control-box:after, .center-wrap .list-box .hd:after, .center-wrap .list-box .item:after, .main-wrap:after, .right-wrap.open .open-box:after, .right-wrap.open .open-l .info:after{
+    content: ' ';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+}
+/* 播放栏样式 */
+.bottom-wrap {
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,.05);
+    position: relative;
+    z-index: 112;
+}
+/* 左部样式 */
+.bottom-wrap .bottom-left {
+    float: left;
+    width: 280px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 0;
+}
+/*上一首*/
+.bottom-wrap .bottom-left .btn-prev {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/prev.png);
+}
+/*暂停*/
+.bottom-wrap .bottom-left .btn-pause {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/pause.png);
+}
+/*播放*/
+.btn-pause,.btn-play {
+    width: 42px !important;
+    height: 42px !important;
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/play.png);
+    margin: 0 40px;
+}
+/*下一首*/
+.bottom-wrap .bottom-left .btn-next {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/next.png);
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: #666666;
+}
+a {
+    transition: color,border,background-color .3s linear 0s;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.bottom-wrap .bottom-left {
+    float: left;
+    width: 280px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 0;
+}
+.bottom-wrap .bottom-left ._btn {
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    text-indent: -9999px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+/*右部样式*/
+.bottom-wrap .bottom-right {
+    float: right;
+    width: 350px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+}
+/*播放方法样式*/
+.bottom-wrap .bottom-right .repeat-tips {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    background: rgba(0,0,0,.75);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0;
+    z-index: -1;
+}
+.bottom-wrap .bottom-right .btn-repeat {
+    display: inline-block;
+    vertical-align: middle;
+    width: 26px;
+    height: 22px;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+}
+/*列表循环*/
+.bottom-wrap .bottom-right .btn-repeat.loop {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/loop.png);
+}
+/*随机播放*/
+.bottom-wrap .bottom-right .btn-repeat.random {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/random.png);
+}
+/*单曲循环*/
+.bottom-wrap .bottom-right .btn-repeat.single {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/single.png);
+}
+.bottom-wrap .bottom-right .btn-volume {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/volume.png) no-repeat;
+}
+.bottom-wrap .bottom-right .volume-bar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 14px;
+    position: relative;
+    margin-left: 8px;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.bottom-wrap .bottom-right .volume-bar .con {
+    width: 100%;
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.bottom-wrap .bottom-right .volume-bar .curr {
+    width: 50%;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    z-index: 2;
+}
+.bottom-wrap .bottom-right .volume-bar .mark {
+    width: 14px; 
+    height: 14px;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/circle2.png) no-repeat;
+    z-index: 3;
+    cursor: pointer;
+}
+/* .mark{
+    padding: 0;
+} */
+/*音质*/
+.bottom-wrap .bottom-right .btn-quality {
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    height: 24px;
+    position: relative;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.bottom-wrap .bottom-right .btn-quality i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    font-style: italic;
+}
+.bottom-wrap .bottom-right .btn-quality i.high {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/hq.png);
+}
+
+.bottom-wrap .bottom-right .btn-quality .hover-box {
+    width: 80px;
+    position: absolute;
+    bottom: 38px;
+    left: -22px;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,.05);
+    background: #fff;
+    padding: 10px 0;
+    border-radius: 3px;
+    display: none;
+}
+.bottom-wrap .bottom-right .btn-quality .hover-box a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    text-indent: 18px;
+}
+.bottom-wrap .bottom-right .btn-quality .hover-box .curr {
+    color: #32b351;
+}
+
+
+
+
+
+/* 中间样式 */
+.bottom-wrap .bottom-center {
+    overflow: hidden;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.bottom-wrap .bottom-center .cover {
+    float: left;
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
+    margin: 7px 15px 0 15px;
+    border-radius: 3px;
+}
+.bottom-wrap .bottom-center .cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+img{
+    border-style: none;
+    vertical-align: middle;
+    border: 0;
+}
+/*播放栏*/
+.bottom-wrap .bottom-center .con {
+    padding-top: 7px;
+    overflow: hidden;
+}
+.bottom-wrap .bottom-center .con .info {
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+}
+.bottom-wrap .bottom-center .con .info .btns {
+    float: right;
+    height: 100%;
+}
+.bottom-wrap .bottom-center .con .info .btns a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    margin-left: 18px;
+}
+.bottom-wrap .bottom-center .con .info .btns .disable {
+    cursor: default;
+}
+/*收藏*/
+.bottom-wrap .bottom-center .con .info .btns .btn-collect {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/collect.png);
+    margin-left: 0;
+}
+/*下载*/
+.bottom-wrap .bottom-center .con .info .btns .btn-download {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/download.png);
+}
+/*转发*/
+.bottom-wrap .bottom-center .con .info .btns .btn-share {
+    background-image: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/share.png);
+}
+.bottom-wrap .bottom-center .con .info .title {
+    display: inline-block;
+    max-width: 50%;
+    font-size: 14px;
+    color: #333;
+}
+/*进度条*/
+.bottom-wrap .bottom-center .con .process-wrap {
+    height: 22px;
+    line-height: 22px;
+}
+/*时间*/
+.bottom-wrap .bottom-center .con .process-wrap .time {
+    float: right;
+    width: 80px;
+    font-size: 12px;
+    margin-left: 15px;
+}
+/*当前播放时间*/
+.bottom-wrap .bottom-center .con .process-wrap .time .curr {
+    margin-right: 5px;
+}
+/*全部时间*/
+.bottom-wrap .bottom-center .con .process-wrap .time .duration {
+    margin-left: 5px;
+}
+/*真·进度条*/
+/*整个框*/
+.bottom-wrap .bottom-center .con .process-wrap .p-box {
+    overflow: hidden;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.bottom-wrap .bottom-center .con .process-wrap .p-box .in {
+    width: 100%;
+    height: 2px;
+    margin: 5px 7px 0;
+    position: relative;
+    background: #f5f5f5;
+}
+
+/*当前进度*/
+.bottom-wrap .bottom-center .con .process-wrap .p-box .curr {
+    width: 0%;
+    background: #333 !important;
+    z-index: 11;
+}
+.bottom-wrap .bottom-center .con .process-wrap .p-box .curr, .bottom-wrap .bottom-center .con .process-wrap .p-box .load {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #e0e0e0;
+    z-index: 10;
+}
+/*可拖动锚点*/
+.bottom-wrap .bottom-center .con .process-wrap .p-box .vernier {
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    width: 14px;
+    height: 14px;
+    background: url(http://static.5sing.kugou.com/5singnew/fm/v1.0.0/images/circle2.png) no-repeat;
+}
+.bottom-wrap .bottom-center .con .info .title, .center-wrap .list-box .singer, .center-wrap .list-box .songname {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.bottom-wrap .bottom-center .con .process-wrap::before {
+    content: ' ';
+    display: table;
+}
